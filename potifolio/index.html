@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pagina Principal</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family:sans-serif;
+            font-weight: 100;
+        }
+
+        main {
+            margin-left:25%;
+            padding: 2%;
+        }
+
+        
+
+        main h1 {
+            text-align: center;
+            font-size: 300%;
+        }
+
+        #Menu {
+            width:25%;
+            height: 100vh;
+            background: #ededed;
+            position: fixed;
+            text-align: center;
+        }
+        #Menu ul {
+            list-style: none;
+        }
+
+        #Menu ul img {
+            border-radius: 5%;
+            margin-bottom: 15%;
+
+            transition: border-radius 1s ease;
+        }
+
+        #Menu ul li {
+            margin: 3% 1%;
+        }
+
+        #Menu ul li a {
+            text-decoration: none;
+            color:skyblue;
+        }
+
+    </style>
+
+    <script>
+        function FadeOut(){
+            document.getElementById("Tela-Escura").style.background = "transparent";
+        }
+    </script>
+</head>
+<body onload="FadeOut()">
+    <div id="Menu">
+        <ul>
+            <li>
+                <img src="img/perfil.jpg" width="80%" alt="">
+            </li>
+            <li><a href="#Inicio">Pagina Inical</a></li>
+            <li><a href="">Galeria</a></li>
+            <li><a href="">Sobre</a></li>
+            <li><a href="">Mais++</a></li>
+        </ul>
+
+        <p> &copy; Hyper</p>
+    </div>
+    
+    <main>
+        <div id="#Inicio">
+            <h1>Bem Vindo ao Potifólio</h1>
+        </div>
+        
+    </main>
+
+
+</body>
+</html>

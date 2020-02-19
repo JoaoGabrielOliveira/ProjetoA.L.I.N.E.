@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br" onload="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="confetti.js"></script>
+    <script src="confetti.min.js"></script>
+
+    <script>
+    function comecar(){
+        confetti.start();
+    }
+
+    function FadeIn(){
+            document.getElementById("Tela-Escura").style.background = "transparent";
+        }
+    </script>
+    <title>Feliz Aniversário Aline</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap');
+
+        *{
+            
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family:sans-serif;
+            font-weight: 100;
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color:rgba(255,234,234, 1);
+            animation: Animacao_main 5s ease infinite;
+        }
+
+
+
+        h1{
+            font-weight: 100;
+            text-align: center;
+            font-size: 400%;
+            font-family: 'Oswald', sans-serif;
+            color: #000;
+
+            animation: mymove 1000ms infinite;
+            animation-timing-function: ease;
+            animation-direction: alternate;
+
+            margin-top: -50px;
+            font-weight: 300;            
+
+            -webkit-user-select: none; 
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        h1:hover {
+            font-size: 420%;
+        }
+
+        p{
+            font-size: 120%;
+            font-weight: 100;
+            position: fixed;
+            top: 62%;
+        }
+         p a {
+             
+             color: pink;
+             font-weight: bold;
+             font-size: 130%;
+         }
+
+        @keyframes mymove {
+            from {font-size: 400%; font-weight: 100;}
+            to   {font-size: 440%; font-weight: 300;}
+        }
+
+        @keyframes Animacao_main {
+            0% { background-color: rgba(255,234,234, 1);}
+            25% { background-color:rgb(255, 217, 168);}
+            /*50% { background-color:rgb(255, 168, 168, 1);}*/
+            100% { background-color: rgba(255,234,234, 1);}
+        }
+
+    </style>
+</head>
+<body onload="comecar()">
+    
+    <main>
+        <h1>Feliz Aniversário <wbr> Aline </wbr></h1>
+
+        <p>Acesse o <a href="potifolio/">link</a> para ver seu presente</p>        
+    </main>    
+</body>
+</html>
