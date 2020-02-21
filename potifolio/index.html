@@ -16,11 +16,19 @@
         }
 
         main {
+            transition: all 0.5s;
             margin-left:25%;
             padding: 2%;
         }
 
-        
+        #checkch:checked ~ #Menu {
+            margin-left: -50%;
+            background: royalblue;
+        }
+
+        #checkch:checked ~ main {
+            margin-left:0%;
+        }
 
         main h1 {
             text-align: center;
@@ -29,29 +37,71 @@
 
         #Menu {
             width:25%;
-            height: 100vh;
+            height: 80vh;
             background: #ededed;
             position: fixed;
             text-align: center;
+            display: grid;
+            grid-template-rows: 40% 50% 10%;
+            margin: 5% 0% 20% 3%;
+            
+            padding: 2% 1%;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.267);
+            transition: all 1s;
         }
+
         #Menu ul {
             list-style: none;
         }
-
-        #Menu ul img {
-            border-radius: 5%;
-            margin-bottom: 15%;
-
+        
+        #Menu p img {
+            border-radius: 50%;
             transition: border-radius 1s ease;
+
+            width:50%;
+            height: auto;
+        }
+
+        #Menu p:nth-child(1) {
+            margin-bottom: 5%;
+        }
+
+        #Menu p:nth-child(2) {
+            font-size: 170%;
+            font-weight: 400;
+            transition: all 1s;
+        }
+
+        #Menu p:nth-child(3) {
+            font-size: 100%;
+            font-weight: 100;
+            transition: all 1s;
         }
 
         #Menu ul li {
-            margin: 3% 1%;
+            margin: 8% 2%;
+            font-size: 120%;            
+        }
+
+        #Menu ul li a:hover {
+            color: royalblue;
         }
 
         #Menu ul li a {
             text-decoration: none;
             color:skyblue;
+            transition: color 0.2s ease;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #Menu {
+                width: 60%;
+            }
+        }
+        @media only screen and (max-width: 800px) {
+            #Menu {
+                width: 35%;
+            }
         }
 
     </style>
@@ -63,15 +113,24 @@
     </script>
 </head>
 <body onload="FadeOut()">
+    <label for="checkch">Meu nome</label>
+    <input type="checkbox" style="width: 30px; height: 30px;" id="checkch">
+
+    
+
     <div id="Menu">
+        <div id="Menu-foto">
+            <p><img src="img/perfil.jpg"></p>
+            <p>Aline Ferreira Peixinho</p>
+            <p>Ilustradora e Desinger</p>
+        </div>
+        
+
         <ul>
-            <li>
-                <img src="img/perfil.jpg" width="80%" alt="">
-            </li>
             <li><a href="#Inicio">Pagina Inical</a></li>
             <li><a href="">Galeria</a></li>
             <li><a href="">Sobre</a></li>
-            <li><a href="">Mais++</a></li>
+
         </ul>
 
         <p> &copy; Hyper</p>
