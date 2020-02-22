@@ -6,15 +6,51 @@
     font-weight: 300;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
+html img.back {
+    user-select: none;
+    filter: brightness(20%);
+    z-index: -1;
+    width: 100%;
+    position: absolute;
+}
+
 main {
     transition: all 0.5s;
     margin-left:0%;
     padding: 2%;
 }
 
-main h1 {
-    text-align: center;
-    font-size: 300%;
+main #Inicio #msg {
+    position:absolute;
+    right:10%;
+    bottom: 10%;
+    animation: msgAnime 2s;
+
+    transition: filter 1s ease;
+    font-size:200%;
+    color: white;
+}
+
+@keyframes msgAnime {
+    0% {
+        right:-20%;
+        opacity: 0;
+        
+    }
+
+    50% {
+        right:10%;
+        opacity: 1;
+        filter: drop-shadow(0px 0px 5px #2df587);
+    }
+
+    100%{
+        filter: drop-shadow(0px 0px 0px #023519);
+    }
 }
 
 #Menu {
@@ -103,7 +139,7 @@ main h1 {
 
 #Menu-flutuante {
     position: fixed;
-    top: 30%;
+    top: 23%;
     left:5%;
 
     opacity: 1;
@@ -118,21 +154,24 @@ main h1 {
 }
 
 #Menu-flutuante ul li {
-    margin: 8vh 0;
+    margin: 10vh 0;
     font-size: 150%;
 }
 
 #Menu-flutuante ul li a {
     text-decoration: none;
-    color:pink;
+    color:#ff94b0;
     transition: color  0.1s ease;
-
+    transition: padding  0.2s ease;
     border-bottom: 1px solid pink;
+    
 }
 
 #Menu-flutuante ul li a:hover {
-    color:palevioletred;  
-    cursor: pointer;          
+    color:#be5b75;
+    padding: 0 50%;
+    cursor: pointer;   
+           
 }
 
 #checkch:checked ~ #Menu {
