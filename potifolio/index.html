@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pagina Principal</title>
+    <title>Aline e seu Fantastico Presente de Aniversário    </title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="org.css">
     <link rel="stylesheet" href="menu.css">
@@ -28,6 +28,18 @@
 
     function SelecionarImagem(url){
         document.getElementById('classe').style.opacity = 1;
+        document.getElementById('classe').style.zIndex = 3;
+
+        document.getElementById('Galeria-Imagem').src = "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/" + url ;
+
+        document.querySelector("html").style.overflowY = "hidden";
+    }
+
+    function SairImagem(){
+        document.getElementById('classe').style.opacity = 0;
+        document.getElementById('classe').style.zIndex = -1;
+
+        document.querySelector("html").style.overflowY = "auto";
     }
 </script>
 
@@ -38,24 +50,60 @@
         display: flex;
 
         position: fixed;
-        top: 23%;
-        left:5%;
+        top: 0%;
+        left:0%;
 
         text-align: center;
 
-        z-index: 3;
-        background: rgba(255, 0, 0, 0.144);
+        z-index: -1;
+        background: rgba(0, 0, 0, 0.8);
         width: 100%;
         height: 100vh;
 
+        transition: opacity 0.2s ease-in;
         
         justify-content: center;
         align-items: center;
     }
 
+    #classe ul {
+        margin-left: auto;
+        margin-right: auto;
+        list-style: none;
+    }
+
+    #classe ul li {
+        margin: 15% 0;
+    }
+
+    #classe ul li #imagem-titulo,#imagem-data, #imagem-texto {
+        color: whitesmoke;
+    }
+
+    
+
+    #classe span {
+        position: fixed;
+        top: 3%;
+        right: 2.5%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 250%;
+        color: whitesmoke;
+
+        cursor: pointer;
+    }
+
     #classe img {
         width:auto;
-        height:  80%;
+        height:  95%;
+    }
+
+    #classe h1 {
+        color: white;
     }
 </style>
 
@@ -121,11 +169,11 @@
                 <h2>Ilustrações</h2>
                 </header>   
                 <div class="Galeria-Imagens">
-                    <div onclick="SelecionarImagem('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/4bc29492520453.5e4d4be7c884f.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/4bc29492520453.5e4d4be7c884f.jpg" alt=""></div>
-                    <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/1c95b492520453.5e4d4be7c2df6.jpg" alt=""></div>
-                    <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/90ca7d92520453.5e4d4be7c4cb7.jpg" alt=""></div>
-                    <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/d3e70f92520453.5e4d4be7c695d.jpg" alt=""></div>
-                    <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/34ae0792520453.5e4d4be7c5638.jpg" alt=""></div>
+                    <div onclick="SelecionarImagem('4bc29492520453.5e4d4be7c884f.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/4bc29492520453.5e4d4be7c884f.jpg" alt=""></div>
+                    <div onclick="SelecionarImagem('1c95b492520453.5e4d4be7c2df6.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/1c95b492520453.5e4d4be7c2df6.jpg" alt=""></div>
+                    <div onclick="SelecionarImagem('90ca7d92520453.5e4d4be7c4cb7.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/90ca7d92520453.5e4d4be7c4cb7.jpg" alt=""></div>
+                    <div onclick="SelecionarImagem('d3e70f92520453.5e4d4be7c695d.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/d3e70f92520453.5e4d4be7c695d.jpg" alt=""></div>
+                    <div onclick="SelecionarImagem('34ae0792520453.5e4d4be7c5638.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/34ae0792520453.5e4d4be7c5638.jpg" alt=""></div>
                 </div>
             </div>
             
@@ -180,10 +228,21 @@
         </div>
     </main>
 
-    <!--
+    
     <div id="classe">
+        <span onclick="SairImagem()"><i class="fas fa-times-circle"></i></span>
         <img id="Galeria-Imagem" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/2be73292516591.5e4d56fc2beb6.png" alt="">
+
+        <ul>
+            <li><h1 id="imagem-titulo">Teen Boo</h1></li>
+            <li><h2 id="imagem-data">10 de Fevereiro de 2019</h2></li>
+            <li><p id="imagem-texto">Um fan-art da personagem de Monstros SA (Monster Inc.)</p></li>
+        </ul>
+        
+        
+        
+
     </div>
-    -->
+    
 </body>
 </html>

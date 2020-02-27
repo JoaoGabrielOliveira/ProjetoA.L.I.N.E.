@@ -22,6 +22,10 @@ main {
     height: 100vh;
 }
 
+#Galeria {
+    margin-bottom: 15%;
+}
+
 #Galeria,#Sobre {  
     width: 85%;
     margin-left: 12%;  
