@@ -6,32 +6,71 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pagina Principal</title>
     <link rel="stylesheet" href="style.css">
-    <style>
+    <link rel="stylesheet" href="org.css">
+    <link rel="stylesheet" href="menu.css">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
+<script>
+    function Iniciar(){
+        var Albuns = document.getElementsByClassName('albuns');
 
-    </style>
-
-    <script>
-        function FadeOut(){
-            document.getElementById("Tela-Escura").style.background = "transparent";
+        for (let i = 0; i < Albuns.length; i++) {
+            Albuns[i].style.display = "none";
         }
-    </script>
+    }
 
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    function SelecionarAlbum(album){
+        Iniciar();
+        document.getElementsByClassName('albuns')[album].style.display = "block";
+    }
+
+    function SelecionarImagem(url){
+        document.getElementById('classe').style.opacity = 1;
+    }
+</script>
+
+<style>
+    #classe{
+        opacity: 0;
+
+        display: flex;
+
+        position: fixed;
+        top: 23%;
+        left:5%;
+
+        text-align: center;
+
+        z-index: 3;
+        background: rgba(255, 0, 0, 0.144);
+        width: 100%;
+        height: 100vh;
+
+        
+        justify-content: center;
+        align-items: center;
+    }
+
+    #classe img {
+        width:auto;
+        height:  80%;
+    }
+</style>
 
 
 </head>
-<body onload="FadeOut()">
-    <img class="back" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/48490c92520453.5e4d4be7c620b.jpg" alt="">
+<body onload="Iniciar(); document.getElementsByClassName('albuns')[0].style.display = 'block';">
+
 
     <input style="position: absolute;" type="checkbox" id="checkch">
 
     <div id="Menu-flutuante">
         <ul class="Menu-lista">
-            <li id="home"><a href="#Inicio"><i class="fas fa-home"></i></a></li>
-            <li id="galeria"><a href=""><i class="far fa-images"></i></a></li>
-            <li id="sobre"><a href=""><i class="fas fa-portrait"></i></a></li>
+            <li id="home">   <a title="Ir para inicio da pagina" href="#Inicio"><i class="fas fa-home"></i></a></li>
+            <li id="galeria"><a title="Ir para Galeria"          href="#Galeria"><i class="far fa-images"></i></a></li>
+            <li id="sobre">  <a title="Ir para Sobre"            href="#Sobre"><i class="fas fa-portrait"></i></a></li>
         </ul>
     </div>
 
@@ -40,13 +79,13 @@
             <p><img src="img/perfil.jpg"></p>
             <p>Aline F. Peixinho</p>
             <p>Ilustradora e Desinger</p>
-        </div>
+    </div>
         
 
         <ul class="Menu-lista">
             <li><a href="#Inicio"><i class="fas fa-home"></i>Inicio</a></li>
-            <li><a href=""><i class="far fa-images"></i>Galeria</a></li>
-            <li><a href=""><i style="margin-right: 18px;" class="fas fa-portrait"></i>Sobre</a></li>
+            <li><a href="#Galeria"><i class="far fa-images"></i>Galeria</a></li>
+            <li><a href="#Sobre"  ><i style="margin-right: 18px;" class="fas fa-portrait"></i>Sobre</a></li>
         </ul>
 
         <p>
@@ -57,17 +96,94 @@
         </p>
     </div>
     
-    <main>
+    <main id="Principal">
         <div id="Inicio">
+            <img class="back" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/48490c92520453.5e4d4be7c620b.jpg" alt="">
             <div id="msg">
                 <h2>Olá mundo...</h2>
                 <h1 style="font-weight:400;">Eu sou a Aline</h1>
             </div>
 
+        </div>        
+
+        <div id="Galeria">
+            <header>
+                <h1>Galeria</h1>
+                <ul>
+                    <li onclick="SelecionarAlbum(0)">Ilustrações</li>
+                    <li onclick="SelecionarAlbum(1)">Identidade Visual</li>
+                    <li onclick="SelecionarAlbum(2)">Personagens famosos</li>
+                </ul>
+            </header>
+
+            <div class="albuns">
+                <header>
+                <h2>Ilustrações</h2>
+                </header>   
+                <div class="Galeria-Imagens">
+                    <div onclick="SelecionarImagem('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/4bc29492520453.5e4d4be7c884f.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/4bc29492520453.5e4d4be7c884f.jpg" alt=""></div>
+                    <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/1c95b492520453.5e4d4be7c2df6.jpg" alt=""></div>
+                    <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/90ca7d92520453.5e4d4be7c4cb7.jpg" alt=""></div>
+                    <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/d3e70f92520453.5e4d4be7c695d.jpg" alt=""></div>
+                    <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/34ae0792520453.5e4d4be7c5638.jpg" alt=""></div>
+                </div>
+            </div>
+            
+            <div class="albuns">
+                <header>
+                <h2>Identidade Visual</h2>
+                </header>
+                <div class="Galeria-Imagens">
+                    <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/2be73292516591.5e4d56fc2beb6.png" alt=""></div>
+                    <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/9160b992516591.5e4d56fc2a4c9.png" alt=""></div>
+                    <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/d217de92516591.5e4d56fc2b23f.png" alt=""></div>
+                    <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/5cf1a192516591.5e4d56fc2c63d.png" alt=""></div>
+                    <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/bb0ab392516591.5e4d56fc2b8f9.png" alt=""></div>
+                    <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/060ac492516591.5e4d56fc2ac09.jpg" alt=""></div>
+                </div>
+            </div>
+            
+            <div class="albuns">
+                <header>
+                    <h2>Personagens famosos</h2>
+                    </header>
+                <div class="Galeria-Imagens">
+                    <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/c9c38a83909527.5d4aee9c75e37.png" alt=""></div>
+                    <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/a9a13783909527.5d4aee9c758b8.png" alt=""></div>
+                    <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/630f3e83909527.5d4aee9c750b0.png" alt=""></div>
+                    <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/e839b283909527.5d4aee9c749f5.png" alt=""></div>
+                    <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/b7ba3283909527.5e4d46c9ba841.jpg" alt=""></div>
+                </div>
+            </div>   
+
         </div>
-        
+
+        <div style="margin-top: 10%;" id="Sobre">
+            <header>
+                <h1>Sobre</h1>
+                <h2>Aline F. Peixinho</h2>
+            </header>
+
+            <article>
+                Nascida em 7 de março de 2000,
+
+                <div id="Conhecimentos">
+                    
+                    
+                </div>
+            </article>
+
+            <section>
+                
+            </section>
+
+        </div>
     </main>
 
-
+    <!--
+    <div id="classe">
+        <img id="Galeria-Imagem" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/2be73292516591.5e4d56fc2beb6.png" alt="">
+    </div>
+    -->
 </body>
 </html>
