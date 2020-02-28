@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" ontouchstart="MostrarMenuCelular(event)" ontouchend="TirarMenuCelular(event)">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,22 @@
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
 <script>
+     //document.querySelector("html").addEventListener("wheel", MostrarMenu);
+
+    function MostrarMenu(){
+        document.getElementById('Menu-flutuante').style.opacity = 1;
+        
+        setTimeout(function(){ document.getElementById('Menu-flutuante').style.opacity = 0; }, 3000);
+    }
+
+    function MostrarMenuCelular(event) {
+        document.getElementById('Menu-flutuante').style.opacity = 1;
+    }
+
+    function TirarMenuCelular(event) {
+        document.getElementById('Menu-flutuante').style.opacity = 0;
+    }
+
     function Iniciar(){
         var Albuns = document.getElementsByClassName('albuns');
 
@@ -130,6 +146,19 @@
     }
 
 }
+
+
+#Sobre article {
+    font-size: 100%;
+
+    text-align: justify;
+    text-indent: 20%;
+    word-spacing: 0.1rem;
+    line-height: 1.5rem;
+    justify-content: center;
+}
+
+
 </style>
 
 
@@ -208,7 +237,7 @@
                 <h2>Identidade Visual</h2>
                 </header>
                 <div class="Galeria-Imagens">
-                    <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/2be73292516591.5e4d56fc2beb6.png" alt=""></div>
+                    <div value="https://www.vitoriahortifruti.com.br/wp-content/uploads/2016/02/Batata-Inglesa-G-500x318.png" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/2be73292516591.5e4d56fc2beb6.png" alt=""></div>
                     <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/9160b992516591.5e4d56fc2a4c9.png" alt=""></div>
                     <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/d217de92516591.5e4d56fc2b23f.png" alt=""></div>
                     <div class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/5cf1a192516591.5e4d56fc2c63d.png" alt=""></div>
@@ -239,11 +268,15 @@
             </header>
 
             <article>
-                Nascida em 7 de março de 2000,
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
                 <div id="Conhecimentos">
+                    <ul>
+                        <li></li>
+                    </ul>
                     
-                    
+                    Adobe Ilustrator                 
                 </div>
             </article>
 
