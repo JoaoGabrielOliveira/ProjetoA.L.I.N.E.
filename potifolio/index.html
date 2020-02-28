@@ -26,11 +26,17 @@
         document.getElementsByClassName('albuns')[album].style.display = "block";
     }
 
-    function SelecionarImagem(url){
-        document.getElementById('lightbox').style.opacity = 1;
-        document.getElementById('lightbox').style.zIndex = 3;
+    function SelecionarImagem(titulo,data,texto,url){
+        var lightbox = document.getElementById('lightbox');
+        lightbox.style.opacity = 1;
+        lightbox.style.zIndex = 3;
+
+        document.getElementById('imagem-titulo').innerText = titulo;
+        document.getElementById('imagem-data').innerText = data;
+        document.getElementById('imagem-texto').innerText = texto;
 
         document.getElementById('Galeria-Imagem').src = "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/" + url ;
+        
 
         document.querySelector("html").style.overflowY = "hidden";
     }
@@ -188,12 +194,12 @@
                 <h2>Ilustrações</h2>
                 </header>   
                 <div class="Galeria-Imagens">
-                    <div onclick="SelecionarImagem('4bc29492520453.5e4d4be7c884f.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/4bc29492520453.5e4d4be7c884f.jpg" alt=""></div>
-                    <div onclick="SelecionarImagem('1c95b492520453.5e4d4be7c2df6.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/1c95b492520453.5e4d4be7c2df6.jpg" alt=""></div>
-                    <div onclick="SelecionarImagem('90ca7d92520453.5e4d4be7c4cb7.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/90ca7d92520453.5e4d4be7c4cb7.jpg" alt=""></div>
-                    <div onclick="SelecionarImagem('d3e70f92520453.5e4d4be7c695d.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/d3e70f92520453.5e4d4be7c695d.jpg" alt=""></div>
-                    <div onclick="SelecionarImagem('34ae0792520453.5e4d4be7c5638.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/34ae0792520453.5e4d4be7c5638.jpg" alt=""></div>
-                    <div onclick="SelecionarImagem('48490c92520453.5e4d4be7c620b.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/48490c92520453.5e4d4be7c620b.jpg" alt=""></div>
+                    <div onclick="SelecionarImagem('Teen Boo','10 de fevereiro de 2019','Um fan-art da personagem de Monstros SA (Monster Inc.)','4bc29492520453.5e4d4be7c884f.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/4bc29492520453.5e4d4be7c884f.jpg" alt=""></div>
+                    <div onclick="SelecionarImagem('Lorem ipsum','10 de outubro de 2019','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum aliquet diam nec sollicitudin. Integer in elit aliquam, viverra dui non, scelerisque sem. Nulla a orci ex. Nulla venenatis commodo tortor, ac scelerisque diam pulvinar eget.','1c95b492520453.5e4d4be7c2df6.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/1c95b492520453.5e4d4be7c2df6.jpg" alt=""></div>
+                    <div onclick="SelecionarImagem('Lorem ipsum','10 de outubro de 2019','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum aliquet diam nec sollicitudin. Integer in elit aliquam, viverra dui non, scelerisque sem. Nulla a orci ex. Nulla venenatis commodo tortor, ac scelerisque diam pulvinar eget.','90ca7d92520453.5e4d4be7c4cb7.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/90ca7d92520453.5e4d4be7c4cb7.jpg" alt=""></div>
+                    <div onclick="SelecionarImagem('Lorem ipsum','10 de outubro de 2019','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum aliquet diam nec sollicitudin. Integer in elit aliquam, viverra dui non, scelerisque sem. Nulla a orci ex. Nulla venenatis commodo tortor, ac scelerisque diam pulvinar eget.','d3e70f92520453.5e4d4be7c695d.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/d3e70f92520453.5e4d4be7c695d.jpg" alt=""></div>
+                    <div onclick="SelecionarImagem('Lorem ipsum','10 de outubro de 2019','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum aliquet diam nec sollicitudin. Integer in elit aliquam, viverra dui non, scelerisque sem. Nulla a orci ex. Nulla venenatis commodo tortor, ac scelerisque diam pulvinar eget.','34ae0792520453.5e4d4be7c5638.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/34ae0792520453.5e4d4be7c5638.jpg" alt=""></div>
+                    <div onclick="SelecionarImagem('Lorem ipsum','10 de outubro de 2019','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum aliquet diam nec sollicitudin. Integer in elit aliquam, viverra dui non, scelerisque sem. Nulla a orci ex. Nulla venenatis commodo tortor, ac scelerisque diam pulvinar eget.','48490c92520453.5e4d4be7c620b.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/48490c92520453.5e4d4be7c620b.jpg" alt=""></div>
                 </div>
             </div>
             
@@ -256,7 +262,7 @@
         <ul>
             <li><h1 id="imagem-titulo">Teen Boo</h1></li>
             <li><h2 id="imagem-data">10 de Fevereiro de 2019</h2></li>
-            <li><p id="imagem-texto">Um fan-art da personagem de Monstros SA (Monster Inc.)</p></li>
+            <li><p id="imagem-texto"></p></li>
         </ul>
         
         
