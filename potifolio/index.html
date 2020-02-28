@@ -27,8 +27,8 @@
     }
 
     function SelecionarImagem(url){
-        document.getElementById('classe').style.opacity = 1;
-        document.getElementById('classe').style.zIndex = 3;
+        document.getElementById('lightbox').style.opacity = 1;
+        document.getElementById('lightbox').style.zIndex = 3;
 
         document.getElementById('Galeria-Imagem').src = "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/" + url ;
 
@@ -36,15 +36,15 @@
     }
 
     function SairImagem(){
-        document.getElementById('classe').style.opacity = 0;
-        document.getElementById('classe').style.zIndex = -1;
+        document.getElementById('lightbox').style.opacity = 0;
+        document.getElementById('lightbox').style.zIndex = -1;
 
         document.querySelector("html").style.overflowY = "auto";
     }
 </script>
 
 <style>
-    #classe{
+    #lightbox{
         opacity: 0;
 
         display: flex;
@@ -56,9 +56,10 @@
         text-align: center;
 
         z-index: -1;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.9);
         width: 100%;
         height: 100vh;
+        padding: 3%;
 
         transition: opacity 0.2s ease-in;
         
@@ -66,23 +67,21 @@
         align-items: center;
     }
 
-    #classe ul {
+    #lightbox ul {
         margin-left: auto;
         margin-right: auto;
         list-style: none;
     }
 
-    #classe ul li {
+    #lightbox ul li {
         margin: 15% 0;
     }
 
-    #classe ul li #imagem-titulo,#imagem-data, #imagem-texto {
+    #lightbox ul li {
         color: whitesmoke;
     }
 
-    
-
-    #classe span {
+    #lightbox span {
         position: fixed;
         top: 3%;
         right: 2.5%;
@@ -97,14 +96,34 @@
         cursor: pointer;
     }
 
-    #classe img {
+    #lightbox img {
         width:auto;
-        height:  95%;
+        height:  50vw;
     }
 
-    #classe h1 {
+    #lightbox h1 {
         color: white;
     }
+
+    @media only screen and (max-width: 600px) {
+        #lightbox {
+        padding: 20% 3% 0 3%;
+        display: list-item;
+    }
+
+    #lightbox img {
+        height:  100vw;
+    }
+
+    #lightbox ul li {
+        margin: 10% 0;
+    }
+
+    #imagem-data {
+        font-size: 200%;
+    }
+
+}
 </style>
 
 
@@ -174,6 +193,7 @@
                     <div onclick="SelecionarImagem('90ca7d92520453.5e4d4be7c4cb7.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/90ca7d92520453.5e4d4be7c4cb7.jpg" alt=""></div>
                     <div onclick="SelecionarImagem('d3e70f92520453.5e4d4be7c695d.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/d3e70f92520453.5e4d4be7c695d.jpg" alt=""></div>
                     <div onclick="SelecionarImagem('34ae0792520453.5e4d4be7c5638.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/34ae0792520453.5e4d4be7c5638.jpg" alt=""></div>
+                    <div onclick="SelecionarImagem('48490c92520453.5e4d4be7c620b.jpg')" class="Galeria-Imagens-item"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/48490c92520453.5e4d4be7c620b.jpg" alt=""></div>
                 </div>
             </div>
             
@@ -229,7 +249,7 @@
     </main>
 
     
-    <div id="classe">
+    <div id="lightbox">
         <span onclick="SairImagem()"><i class="fas fa-times-circle"></i></span>
         <img id="Galeria-Imagem" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/2be73292516591.5e4d56fc2beb6.png" alt="">
 
