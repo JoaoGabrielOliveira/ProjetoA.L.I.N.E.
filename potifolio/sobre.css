@@ -1,0 +1,43 @@
+#Sobre {
+    padding: 1% 5%;
+}
+
+#Sobre article {
+    font-size: 100%;
+    text-align: justify;
+    text-indent: 20%;
+    word-spacing: 0.1rem;
+    line-height: 1.5rem;
+    justify-content: center;
+    
+    padding: 3%;
+    
+    margin: 5% 0%;
+}
+
+#Sobre ul {
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+
+    list-style: none;
+}
+
+#Sobre ul li{
+    width: 50%;
+    margin: 2% 0;
+    padding: 0%;
+}
+
+#Sobre ul.Progresso li {
+
+}
+
+#Sobre ul li::before{
+    content: '•';
+    color: brown;
+    font-size: 190%;
+    vertical-align: middle;
+
+    background-image: url('potifolio\img\cupcake.png');
+}

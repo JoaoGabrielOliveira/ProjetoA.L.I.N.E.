@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Aline e seu Fantastico Presente de Aniversário    </title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="org.css">
+    <link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="galeria.css">
+    <link rel="stylesheet" href="sobre.css">
     <link rel="stylesheet" href="menu.css">
+
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -64,102 +67,6 @@
         document.querySelector("html").style.overflowY = "auto";
     }
 </script>
-
-<style>
-    #lightbox{
-        opacity: 0;
-
-        display: flex;
-
-        position: fixed;
-        top: 0%;
-        left:0%;
-
-        text-align: center;
-
-        z-index: -1;
-        background: rgba(0, 0, 0, 0.9);
-        width: 100%;
-        height: 100vh;
-        padding: 3%;
-
-        transition: opacity 0.2s ease-in;
-        
-        justify-content: center;
-        align-items: center;
-    }
-
-    #lightbox ul {
-        margin-left: auto;
-        margin-right: auto;
-        list-style: none;
-    }
-
-    #lightbox ul li {
-        margin: 15% 0;
-    }
-
-    #lightbox ul li {
-        color: whitesmoke;
-    }
-
-    #lightbox span {
-        position: fixed;
-        top: 3%;
-        right: 2.5%;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        font-size: 250%;
-        color: whitesmoke;
-
-        cursor: pointer;
-    }
-
-    #lightbox img {
-        width:auto;
-        height:  50vw;
-    }
-
-    #lightbox h1 {
-        color: white;
-    }
-
-    @media only screen and (max-width: 600px) {
-        #lightbox {
-        padding: 20% 3% 0 3%;
-        display: list-item;
-    }
-
-    #lightbox img {
-        height:  100vw;
-    }
-
-    #lightbox ul li {
-        margin: 10% 0;
-    }
-
-    #imagem-data {
-        font-size: 200%;
-    }
-
-}
-
-
-#Sobre article {
-    font-size: 100%;
-
-    text-align: justify;
-    text-indent: 20%;
-    word-spacing: 0.1rem;
-    line-height: 1.5rem;
-    justify-content: center;
-}
-
-
-</style>
 
 
 </head>
@@ -269,25 +176,34 @@
 
             <article>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-                <div id="Conhecimentos">
-                    <ul>
-                        <li></li>
-                    </ul>
-                    
-                    Adobe Ilustrator                 
-                </div>
+                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.             
             </article>
 
-            <section>
-                
-            </section>
+                <h2>Nivel em Softwares</h2>
 
+            <article>
+                <ul class="Progresso">
+                    <li>Adobe Photoshop: 73%</li>
+                    <li>Adobe Illustrator: 83%</li>
+                    <li>Autodesk Sketchbook: 73%</li>
+                    <li>Adobe Photoshop: 73%</li>
+                </ul>
+            </article>
+
+            <h2>Design Skills</h2>
+
+            <article>
+                <ul>
+                    <li>Teoria de cores</li>
+                    <li>Tipografia</li>
+                    <li>Composição</li>
+                    <li>Comunicação</li>
+                    <li>Ilustração</li>
+                </ul>
+            </article>
         </div>
     </main>
 
-    
     <div id="lightbox">
         <span onclick="SairImagem()"><i class="fas fa-times-circle"></i></span>
         <img id="Galeria-Imagem" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/2be73292516591.5e4d56fc2beb6.png" alt="">

@@ -123,6 +123,10 @@
            
 }
 
+#checkch {
+    display: none;
+}
+
 #checkch:checked ~ #Menu {
     margin: 1% 0% 20% 3%;
     opacity: 1;
