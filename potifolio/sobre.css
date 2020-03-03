@@ -1,36 +1,47 @@
-#Sobre {
-    padding: 1% 5%;
+#Sobre   {
+    padding: 1% 0% 1% 5%;
+    margin-left: 5%;
 }
 
-#Sobre article {
+#Sobre section {
+    margin: 1% 0 1% 8%;
+    padding: 8%;
+}
+
+#Sobre h2{
+    font-size: 200%;
+    margin-bottom: 4%;
+}
+
+#Sobre section article {
     font-size: 100%;
     text-align: justify;
     text-indent: 20%;
     word-spacing: 0.1rem;
-    line-height: 1.5rem;
-    justify-content: center;
-    
-    padding: 3%;
-    
-    margin: 5% 0%;
+    line-height: 1.5rem;    
+}
+
+#Sobre .flexivel {
+    border: 1px solid black;
+}
+
+#Sobre aside {
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+
+    margin: 3% 2%;
+    padding: 4%;
+
+    border: 1px solid black;
+}
+
+#Sobre aside h2 {
+    margin-bottom: 3%;
 }
 
 #Sobre ul {
-    width: 100%;
-    margin: 0%;
-    padding: 0%;
-
     list-style: none;
-}
-
-#Sobre ul li{
-    width: 50%;
-    margin: 2% 0;
-    padding: 0%;
-}
-
-#Sobre ul.Progresso li {
-
 }
 
 #Sobre ul li::before{
@@ -38,6 +49,15 @@
     color: brown;
     font-size: 190%;
     vertical-align: middle;
+}
 
-    background-image: url('potifolio\img\cupcake.png');
+@media only screen and (max-width: 600px) {
+    #Sobre aside {
+        padding: 8%;
+    }
+
+    #Sobre section {
+        margin: 15% 0 15% 8%;
+        padding: 8%;
+    }
 }

@@ -19,7 +19,7 @@
     <title>Feliz Aniversário Aline</title>
 
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Oswald:100,200&display=swap');
 
         *{
             
@@ -79,8 +79,9 @@
          }
 
         @keyframes mymove {
-            from {font-size: 400%; font-weight: 100;}
-            to   {font-size: 440%; font-weight: 300;}
+            0%{font-size: 0.5vw; font-weight: 100; filter: blur(5px)}
+            50% { filter: blur(0);}
+            100%   {font-size: 14vw; font-weight: 300;}
         }
 
         @keyframes Animacao_main {
@@ -96,7 +97,6 @@
     
     <main>
         <h1>Feliz Aniversário <wbr> Aline </wbr></h1>
-
         <p>Acesse o <a href="potifolio/">link</a> para ver seu presente</p>        
     </main>    
 </body>

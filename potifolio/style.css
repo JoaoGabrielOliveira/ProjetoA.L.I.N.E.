@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    
 }
 
 html, body {
@@ -41,13 +41,6 @@ main {
     transition: all 0.5s;
 }
 
-#Galeria,#Sobre {  
-    width: 85%;
-    margin-left: 12%;  
-}
-
-
-
 img.back {
     user-select: none;
     filter: brightness(20%);
@@ -59,7 +52,7 @@ img.back {
 
 header {
     text-align: center;
-    margin: 10% auto;
+    margin: 10% auto 2% auto;
     padding: 20% auto;
 
     animation-delay: 3s;
@@ -94,64 +87,6 @@ h2{
     text-align: center;
     font-size: 250%;
     font-weight: 100;
-}
-
-@media only screen and (max-width: 600px) {
-
-    /*Principal*/
-
-    #Galeria,#Sobre {
-        width: 90%;
-        margin-left: 5%;
-    }
-
-
-    #Menu {
-        width:60%;
-    }
-
-    #checkch:checked ~ main {
-        margin-left:10%;
-    }
-
-    /*Galeria*/
-
-    #Galeria .Galeria-Imagens {
-        width: 100%;
-        border: 1px solid rgba(0, 0, 0, 0.3);
-    }
-
-    #Galeria .Galeria-Imagens .Galeria-Imagens-item {
-        filter: grayscale(0%);
-        width: 80%;
-        max-width: 100%;
-    }
-
-    /*Outros*/
-
-    header ul li {
-        display: list-item;
-        font-size: 100%;
-    }
-
-    /*Lightbox*/
-    #lightbox {
-        padding: 20% 3% 0 3%;
-        display: list-item;
-    }
-    
-    #lightbox img {
-        height:  100vw;
-    }
-    
-    #lightbox ul li {
-        margin: 10% 0;
-    }
-    
-    #imagem-data {
-        font-size: 200%;
-    }
-    
 }
 
 #lightbox{
@@ -213,4 +148,79 @@ h2{
 
 #lightbox h1 {
     color: white;
+}
+
+.flexivel {
+    display: -ms-flexbox;
+    -ms-flexbox-wrap:wrap;
+    -ms-flex-direction: column;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+
+    display: -webkit-box;
+    display: flex;
+
+    
+}
+
+@media only screen and (max-width: 600px) {
+
+    /*Principal*/
+
+    #Galeria,#Sobre {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+
+    #Menu {
+        width:60%;
+    }
+
+    #checkch:checked ~ main {
+        margin-left:10%;
+    }
+
+    /*Galeria*/
+
+    #Galeria .Galeria-Imagens {
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    #Galeria .Galeria-Imagens .Galeria-Imagens-item {
+        filter: grayscale(0%);
+        width: 80%;
+        max-width: 100%;
+    }
+
+    /*Outros*/
+
+    header ul li {
+        display: list-item;
+        font-size: 100%;
+    }
+
+    /*Lightbox*/
+    #lightbox {
+        padding: 20% 3% 0 3%;
+        display: list-item;
+    }
+    
+    #lightbox img {
+        height:  100vw;
+    }
+    
+    #lightbox ul li {
+        margin: 5% 0;
+    }
+
+    #imagem-titulo {
+        font-size: 200%;
+    }
+    
+    #imagem-data {
+        font-size: 100%;
+    }
+    
 }
