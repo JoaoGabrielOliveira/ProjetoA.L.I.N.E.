@@ -1,5 +1,8 @@
 #Galeria {
-    margin-bottom: 15%;
+    width: 85%;
+    margin-left: 12%;  
+    
+    margin-bottom: 5%;
 }
 
 #Galeria .Galeria-Imagens {
@@ -48,4 +51,19 @@
     box-shadow:0px 2px 5px black;
     
     height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+
+    #Galeria .Galeria-Imagens {
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    #Galeria .Galeria-Imagens .Galeria-Imagens-item {
+        filter: grayscale(0%);
+        width: 80%;
+        max-width: 100%;
+    }
+
 }

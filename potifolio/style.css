@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    
 }
 
 html, body {
@@ -41,28 +41,12 @@ main {
     transition: all 0.5s;
 }
 
-#Galeria,#Sobre {  
-    width: 85%;
-    margin-left: 12%;  
-}
-
-
-
-img.back {
-    user-select: none;
-    filter: brightness(20%);
-    z-index: -1;
-    width: 100%;
-}
-
 /*Outros*/
 
 header {
     text-align: center;
-    margin: 10% auto;
+    margin: 10% auto 2% auto;
     padding: 20% auto;
-
-    animation-delay: 3s;
 }
 
 header ul {
@@ -96,62 +80,30 @@ h2{
     font-weight: 100;
 }
 
-@media only screen and (max-width: 600px) {
+footer {
+    font-weight: 300;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    width: 100%;
+    vertical-align: middle;
+    padding: 3% 2%;
+    font-size: 130%;
 
-    /*Principal*/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+}
+footer div {
+    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.2));
+}
 
-    #Galeria,#Sobre {
-        width: 90%;
-        margin-left: 5%;
-    }
-
-
-    #Menu {
-        width:60%;
-    }
-
-    #checkch:checked ~ main {
-        margin-left:10%;
-    }
-
-    /*Galeria*/
-
-    #Galeria .Galeria-Imagens {
-        width: 100%;
-        border: 1px solid rgba(0, 0, 0, 0.3);
-    }
-
-    #Galeria .Galeria-Imagens .Galeria-Imagens-item {
-        filter: grayscale(0%);
-        width: 80%;
-        max-width: 100%;
-    }
-
-    /*Outros*/
-
-    header ul li {
-        display: list-item;
-        font-size: 100%;
-    }
-
-    /*Lightbox*/
-    #lightbox {
-        padding: 20% 3% 0 3%;
-        display: list-item;
-    }
-    
-    #lightbox img {
-        height:  100vw;
-    }
-    
-    #lightbox ul li {
-        margin: 10% 0;
-    }
-    
-    #imagem-data {
-        font-size: 200%;
-    }
-    
+footer div:nth-child(1) {
+    text-align: left;
+}
+footer div:nth-child(2) {
+    text-align: center;
+}
+footer div:nth-child(3) {
+    text-align: right;
 }
 
 #lightbox{
@@ -213,4 +165,61 @@ h2{
 
 #lightbox h1 {
     color: white;
+}
+
+@media only screen and (max-width: 600px) {
+
+    /*Principal*/
+
+    #Galeria,#Sobre {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+
+    #Menu {
+        width:60%;
+    }
+
+    #checkch:checked ~ main {
+        margin-left:10%;
+    }
+
+    /*Outros*/
+
+    header ul li {
+        display: list-item;
+        font-size: 120%;
+    }
+
+    /*Lightbox*/
+    #lightbox {
+        padding: 20% 3% 0 3%;
+        display: list-item;
+    }
+    
+    #lightbox img {
+        height:  100vw;
+    }
+    
+    #lightbox ul li {
+        margin: 5% 0;
+    }
+
+    #imagem-titulo {
+        font-size: 200%;
+    }
+    
+    #imagem-data {
+        font-size: 100%;
+    }
+    footer {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(auto, auto);
+        grid-gap: 20px;
+    }
+
+    footer div {
+        text-align: center !important; 
+    }
 }

@@ -12,8 +12,24 @@ main #Inicio #msg {
     animation: msgAnime 3s;
 
     transition: filter 1s ease;
-    font-size:200%;
     color: white;
+}
+
+#Inicio #msg h2 {
+    font-size:200%;
+}
+
+#Inicio #msg h1 {
+    font-weight:400;
+}
+
+img.back {
+    user-select: none;
+    filter: brightness(20%);
+    z-index: -1;
+    width: 100%;
+
+    display: inline;
 }
 
 
@@ -32,4 +48,68 @@ main #Inicio #msg {
     100%{
         filter: drop-shadow(0px 0px 0px #023519);
     }
+}
+
+@media only screen and (max-width: 768px) {
+
+    img.back {
+        user-select: none;
+        
+        filter: brightness(20%);
+        z-index: -1;
+        width: auto;
+        height: 100%;
+    }
+
+    main #Inicio #msg {
+        user-select: none;
+        transition: filter 1s ease;
+        font-size:100%;
+        color: white;
+
+        animation: none;
+        right:10%;
+        bottom: 50%;
+    }
+
+    #Inicio #msg h2 {
+        animation: h2move 3s ease;
+        font-size:150%;
+    }
+    
+    #Inicio #msg h1 {
+        animation: h1move 3s ease;
+        font-size:250%;
+    }
+    
+    @keyframes h2move {
+        0% {
+            margin-left: -50%;
+        }
+
+        50% {
+            margin-left: 0%;
+        }
+
+        100% {
+            
+        }
+    }
+
+    @keyframes h1move {
+        0% {
+            margin-right: -100%;
+        }
+
+        50% {
+            margin-right: 0%;
+        }
+
+        100% {
+            
+        }
+    }
+    
+    
+
 }

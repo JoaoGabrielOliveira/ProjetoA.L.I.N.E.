@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" ontouchstart="MostrarMenuCelular(event)" ontouchend="TirarMenuCelular(event)">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,27 +11,25 @@
     <link rel="stylesheet" href="sobre.css">
     <link rel="stylesheet" href="menu.css">
 
-
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
-<script>
-     //document.querySelector("html").addEventListener("wheel", MostrarMenu);
+<script> 
+    function mudarImagem(){
+        var Imagem = "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/4bc29492520453.5e4d4be7c884f.jpg";
+        /*
+        setInterval(function(){
+             document.getElementsByClassName('back')[0].src = Imagem;
+             }, 3000);
+        */
+    }
 
     function MostrarMenu(){
         document.getElementById('Menu-flutuante').style.opacity = 1;
         
         setTimeout(function(){ document.getElementById('Menu-flutuante').style.opacity = 0; }, 3000);
     }
-
-    function MostrarMenuCelular(event) {
-        document.getElementById('Menu-flutuante').style.opacity = 1;
-    }
-
-    function TirarMenuCelular(event) {
-        document.getElementById('Menu-flutuante').style.opacity = 0;
-    }
-
+    
     function Iniciar(){
         var Albuns = document.getElementsByClassName('albuns');
 
@@ -73,13 +71,13 @@
 <body onload="Iniciar(); document.getElementsByClassName('albuns')[0].style.display = 'block';">
 
 
-    <input style="position: absolute;" type="checkbox" id="checkch">
+    <input type="checkbox" id="checkch">
 
     <div id="Menu-flutuante">
         <ul class="Menu-lista">
             <li id="home">   <a title="Ir para inicio da pagina" href="#Inicio"><i class="fas fa-home"></i></a></li>
-            <li id="galeria"><a title="Ir para Galeria"          href="#Galeria"><i class="far fa-images"></i></a></li>
             <li id="sobre">  <a title="Ir para Sobre"            href="#Sobre"><i class="fas fa-portrait"></i></a></li>
+            <li id="galeria"><a title="Ir para Galeria"          href="#Galeria"><i class="far fa-images"></i></a></li>
         </ul>
     </div>
 
@@ -93,8 +91,8 @@
 
         <ul class="Menu-lista">
             <li><a href="#Inicio"><i class="fas fa-home"></i>Inicio</a></li>
-            <li><a href="#Galeria"><i class="far fa-images"></i>Galeria</a></li>
             <li><a href="#Sobre"  ><i style="margin-right: 18px;" class="fas fa-portrait"></i>Sobre</a></li>
+            <li><a href="#Galeria"><i class="far fa-images"></i>Galeria</a></li>
         </ul>
 
         <p>
@@ -107,13 +105,125 @@
     
     <main id="Principal">
         <div id="Inicio">
-            <img class="back" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/48490c92520453.5e4d4be7c620b.jpg" alt="">
+            <img onload="mudarImagem()" class="back" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/48490c92520453.5e4d4be7c620b.jpg" alt="">
             <div id="msg">
                 <h2>Olá mundo...</h2>
-                <h1 style="font-weight:400;">Eu sou a Aline</h1>
+                <h1>Eu sou a Aline</h1>
             </div>
 
         </div>        
+
+        <div style="margin-top: 5vh;" id="Sobre">
+            <header>
+                <h1>Sobre</h1>
+                <h2>Aline Peixinho</h2>
+            </header>
+
+            <section>
+                <article>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                       It has survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+                         sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.             
+                </article>
+            </section>
+
+            <section>
+                <h2>Como ilustradora PRO</h2>
+                <article>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                       It has survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+                         sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.             
+                </article>
+
+                <h2>Como Design PRO</h2>
+                <article>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                       It has survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+                         sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.             
+                </article>
+            </section>
+
+            <section>
+                <h2>Nivel em Softwares</h2> 
+                
+                <div class="grid">
+                    <!--
+                    <article>
+                            <ul class="Progresso">
+                                <li>Adobe Photoshop: 73%</li>
+                                <li>Adobe Illustrator: 83%</li>
+                                <li>Autodesk Sketchbook: 73%</li>
+                                <li>Adobe Photoshop: 73%</li>
+                            </ul>
+                    </article>
+            
+                    <aside>
+                            <h2>Design Skills</h2>
+            
+                            <article>
+                                <ul>
+                                    <li>Teoria de cores</li>
+                                    <li>Tipografia</li>
+                                    <li>Composição</li>
+                                    <li>Comunicação</li>
+                                    <li>Ilustração</li>
+                                </ul>
+                            </article>    
+                    </aside>
+    
+                    <aside>
+                        <h2>Design Skills</h2>
+        
+                        <article>
+                            <ul>
+                                <li>Teoria de cores</li>
+                                <li>Tipografia</li>
+                                <li>Composição</li>
+                                <li>Comunicação</li>
+                                <li>Ilustração</li>
+                            </ul>
+                        </article>    
+                </aside>
+                -->
+                    <div class="caixa">
+                        <div class="conteudo">
+                            <img src="img/skills.png" alt="">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                    </div>
+
+                    <div class="caixa">
+                        <div class="conteudo">
+                            <img src="img/skills.png" alt="">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                    </div>
+
+                    <div class="caixa">
+                        <div class="conteudo">
+                            <img src="img/skills.png" alt="">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                    </div>
+
+                    <div class="caixa">
+                        <div class="conteudo">
+                            <img src="img/skills.png" alt="">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>                
+        </div>
 
         <div id="Galeria">
             <header>
@@ -167,42 +277,13 @@
             </div>   
 
         </div>
-
-        <div style="margin-top: 10%;" id="Sobre">
-            <header>
-                <h1>Sobre</h1>
-                <h2>Aline F. Peixinho</h2>
-            </header>
-
-            <article>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.             
-            </article>
-
-                <h2>Nivel em Softwares</h2>
-
-            <article>
-                <ul class="Progresso">
-                    <li>Adobe Photoshop: 73%</li>
-                    <li>Adobe Illustrator: 83%</li>
-                    <li>Autodesk Sketchbook: 73%</li>
-                    <li>Adobe Photoshop: 73%</li>
-                </ul>
-            </article>
-
-            <h2>Design Skills</h2>
-
-            <article>
-                <ul>
-                    <li>Teoria de cores</li>
-                    <li>Tipografia</li>
-                    <li>Composição</li>
-                    <li>Comunicação</li>
-                    <li>Ilustração</li>
-                </ul>
-            </article>
-        </div>
     </main>
+
+    <footer>
+        <div>&copy;  Direitos Autorais a Hyper, 2020</div>
+        <div>Cedido a <b>Aline F. Peixinho </b></div>
+        <div>Prezada amiga</div>
+    </footer>
 
     <div id="lightbox">
         <span onclick="SairImagem()"><i class="fas fa-times-circle"></i></span>

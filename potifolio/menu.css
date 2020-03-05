@@ -113,18 +113,19 @@
     transition: color  0.1s ease;
     transition: padding  0.2s ease;
     border-bottom: 1px solid pink;
-    
 }
 
 #Menu-flutuante ul li a:hover {
     color:#924358;
     padding: 0 50%;
-    cursor: pointer;   
-           
+    cursor: pointer; 
 }
 
 #checkch {
-    display: none;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    z-index: 3;
 }
 
 #checkch:checked ~ #Menu {
@@ -137,12 +138,32 @@
 }
 
 #checkch:checked ~ main {
-    margin-left:30%;
+    
 }
 
 
 @media only screen and (max-width: 600px) {
     #Menu {
         width: 60%;
+    }
+
+    #Menu-flutuante {
+        top: 0%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 3% 0;
+        background: rgba(0, 0, 0, 0.05);
+    }
+
+    #Menu-flutuante ul li {
+        display: inline;  
+         
+        font-size: 200%;
+        margin: 0 10vw;
+    }
+
+    #Menu-flutuante ul li a:hover {
+        padding: 0 2%;
     }
 }
