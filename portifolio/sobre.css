@@ -1,0 +1,96 @@
+#Sobre   {
+    width: 90%;
+    padding: 1% 0% 1% 0%;
+    margin-left: 5%;
+}
+
+#Sobre section {
+    margin: 200px auto 200px 7%;
+}
+
+#Sobre section:nth-child(1) {
+    background-color: red;
+}
+
+#Sobre h2{
+    font-size: 200%;
+    margin-bottom: 4%;
+}
+
+#Sobre section article {
+    font-size: 100%;
+    text-align: justify;
+    text-indent: 20%;
+    word-spacing: 0.1rem;
+    line-height: 1.5rem;
+
+    margin-bottom: 50px;
+}
+
+#Sobre section .grid {
+    background: #00000010;
+    padding: 3%;
+
+    position: relative;
+    max-width: 100%;
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(100px, auto));
+    margin: 40px;
+    grid-auto-flow: dense;
+    grid-gap: 10px;
+}
+
+#Sobre section .grid .caixa {
+    background: #bdbdbd;
+
+    padding: 20px;
+    display: grid;
+    font-size: 120%;
+    place-items: center;
+    text-align: center;
+    color: #fff;
+    transition: 0.5s;
+}
+
+#Sobre section .grid .caixa:hover {
+    background: #ff94b0;
+}
+
+#Sobre section .grid .caixa img {
+    position: relative;
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+#Sobre ul {
+    list-style: none;
+}
+
+#Sobre ul li::before{
+    content: '•';
+    color: brown;
+    font-size: 190%;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 600px) {
+
+    #Sobre   {
+        width: 90%;
+        padding: 1% 0% 1% 0%;
+        margin-right: auto;
+    }
+
+    #Sobre section {
+        margin: 0 auto;
+        padding: 8%;
+    }
+
+    #Sobre section .grid {
+        margin: 0;
+    }
+
+
+}

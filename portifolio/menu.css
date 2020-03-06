@@ -1,0 +1,170 @@
+#Menu, #Menu-flutuante,#checkch {
+    z-index: 2;
+}
+
+#Menu {
+    width:25%;
+    height: 95vh;
+    background: #ededed;
+    position: fixed;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 45% 45% 10%;
+    margin-left: -100%;
+    opacity: 0;
+    
+    
+    padding: 2% 1%;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+    transition: all 1s;
+}
+
+#Menu ul {
+    list-style: none;
+}
+
+#Menu p img {
+    border-radius: 50%;
+    transition: border-radius 1s ease;
+
+    width:60%;
+    height: auto;
+}
+
+#Menu p:nth-child(1) {
+    margin-bottom: 5%;
+}
+
+#Menu p:nth-child(2) {
+    font-size: 170%;
+    font-weight: 400;
+    transition: all 1s;
+}
+
+#Menu p:nth-child(3) {
+    font-size: 100%;
+    font-weight: 400;
+    transition: all 1s;
+}
+
+#Menu ul {
+    text-align: left;
+    
+    padding: 0 10%;
+}
+
+#Menu ul li {
+    margin: 15% 2%;
+    font-size: 120%;            
+}
+
+#Menu ul li i{
+    margin-right: 10px;
+    font-size: 120%;            
+}
+
+#Menu ul li a:hover {
+    color: royalblue;
+    cursor: pointer;
+}
+
+#Menu ul li a {
+    text-decoration: none;
+    color:skyblue;
+    transition: color 0.2s ease;
+}
+
+#Menu p i {
+    color:cyan;
+    margin: 0% 5%;
+    margin-top: 8%;
+    font-size: 32px;
+    transition: color 0.1s ease;
+}
+
+#Menu p i:hover {
+    color:royalblue;
+}
+
+#Menu-flutuante {
+    position: fixed;
+    top: 23%;
+    left:5%;
+
+    opacity: 1;
+
+    transition: all 0.2s ease;
+    transition-delay: 0.4s;
+}
+
+#Menu-flutuante ul {
+    list-style: none;
+    text-align: center;
+}
+
+#Menu-flutuante ul li {
+    margin: 10vh 0;
+    font-size: 150%;
+}
+
+#Menu-flutuante ul li a {
+    text-decoration: none;
+    color:#ff94b0;
+    transition: color  0.1s ease;
+    transition: padding  0.2s ease;
+    border-bottom: 1px solid pink;
+}
+
+#Menu-flutuante ul li a:hover {
+    color:#924358;
+    padding: 0 50%;
+    cursor: pointer; 
+}
+
+#checkch {
+    display: none;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    z-index: 3;
+}
+
+#checkch:checked ~ #Menu {
+    margin: 1% 0% 20% 3%;
+    opacity: 1;
+}
+
+#checkch:checked ~ #Menu-flutuante {
+    opacity: 0;
+}
+
+#checkch:checked ~ main {
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+    #Menu {
+        width: 60%;
+    }
+
+    #Menu-flutuante {
+        top: 0%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 3% 0;
+        background: rgba(0, 0, 0, 0.05);
+    }
+
+    #Menu-flutuante ul li {
+        display: inline;  
+         
+        font-size: 200%;
+        margin: 0 10vw;
+    }
+
+    #Menu-flutuante ul li a:hover {
+        padding: 0 2%;
+    }
+}

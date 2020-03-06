@@ -1,0 +1,37 @@
+{
+    "Galeria":{
+        "Albuns":[
+            {"Codigo":0, "Titulo":"Ilustrações","Descrição":""},
+            {"Codigo":1, "Titulo":"Identidade Visual","Descrição":""},
+            {"Codigo":2, "Titulo":"Personagens famosos","Descrição":""}
+        ],
+
+        "Ilustração":[
+                {"Codigo":0,"Título":"Teen Boo","Data":"10 de fevereiro de 2019","Descrição":"Um fan-art da personagem de Monstros SA (Monster Inc.)","Album":0,"Imagem":"4bc29492520453.5e4d4be7c884f.jpg"},
+                {"Codigo":1,"Título":"Deus é uma Mulher","Data":"10 de fevereiro de 2019","Descrição":"Ilustração da celebre frase","Album":0,"Imagem":"90ca7d92520453.5e4d4be7c4cb7.jpg"},
+                {"Codigo":2,"Título":"Teen Boo","Data":"10 de fevereiro de 2019","Descrição":"Um fan-art da personagem de Monstros SA (Monster Inc.)","Album":0,"Imagem":"4bc29492520453.5e4d4be7c884f.jpg"},
+                {"Codigo":3,"Título":"Teen Boo","Data":"10 de fevereiro de 2019","Descrição":"Um fan-art da personagem de Monstros SA (Monster Inc.)","Album":0,"Imagem":"4bc29492520453.5e4d4be7c884f.jpg"}
+            ]
+    },
+
+
+
+
+"Sobre":{
+    "Texto_principal":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "Habilidades":[
+        {
+            "Softwares":[
+                {"Codigo":0, "Titulo":"Adobe Photoshop","Texto":"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", "Nivel":70, "Imagem":"img/skills.png"},
+                {"Codigo":1, "Titulo":"Adobe Illustrator","Texto":"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", "Nivel":80, "Imagem":"img/skills.png"},
+                {"Codigo":2, "Titulo":"Autodesk SketchBook ","Texto":"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", "Nivel":100, "Imagem":"img/skills.png"}
+        ]},
+
+    {"Outros_Textos":[
+        {"Codigo":"0", "Titulo":"Como Ilustradora PRO", "Texto":"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"},
+        {"Codigo":"1", "Titulo":"Como Design PRO", "Texto":"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"}
+        
+    ] }       
+    ]
+}
+}
