@@ -1,37 +1,194 @@
 {
-    "Galeria":{
-        "Albuns":[
-            {"Codigo":0, "Titulo":"Ilustrações","Descrição":""},
-            {"Codigo":1, "Titulo":"Identidade Visual","Descrição":""},
-            {"Codigo":2, "Titulo":"Personagens famosos","Descrição":""}
-        ],
-
-        "Ilustração":[
-                {"Codigo":0,"Título":"Teen Boo","Data":"10 de fevereiro de 2019","Descrição":"Um fan-art da personagem de Monstros SA (Monster Inc.)","Album":0,"Imagem":"4bc29492520453.5e4d4be7c884f.jpg"},
-                {"Codigo":1,"Título":"Deus é uma Mulher","Data":"10 de fevereiro de 2019","Descrição":"Ilustração da celebre frase","Album":0,"Imagem":"90ca7d92520453.5e4d4be7c4cb7.jpg"},
-                {"Codigo":2,"Título":"Teen Boo","Data":"10 de fevereiro de 2019","Descrição":"Um fan-art da personagem de Monstros SA (Monster Inc.)","Album":0,"Imagem":"4bc29492520453.5e4d4be7c884f.jpg"},
-                {"Codigo":3,"Título":"Teen Boo","Data":"10 de fevereiro de 2019","Descrição":"Um fan-art da personagem de Monstros SA (Monster Inc.)","Album":0,"Imagem":"4bc29492520453.5e4d4be7c884f.jpg"}
-            ]
-    },
-
-
-
-
-"Sobre":{
-    "Texto_principal":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    "Habilidades":[
+    "Galeria": {
+      "Albuns": [
         {
-            "Softwares":[
-                {"Codigo":0, "Titulo":"Adobe Photoshop","Texto":"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", "Nivel":70, "Imagem":"img/skills.png"},
-                {"Codigo":1, "Titulo":"Adobe Illustrator","Texto":"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", "Nivel":80, "Imagem":"img/skills.png"},
-                {"Codigo":2, "Titulo":"Autodesk SketchBook ","Texto":"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", "Nivel":100, "Imagem":"img/skills.png"}
-        ]},
+          "Codigo": 0,
+          "Titulo": "Comissões",
+          "Descricao": ""
+        },
+        {
+          "Codigo": 1,
+          "Titulo": "Identidade Visual",
+          "Descricao": ""
+        },
+        {
+          "Codigo": 2,
+          "Titulo": "Ilustrações",
+          "Descricao": ""
+        },
 
-    {"Outros_Textos":[
-        {"Codigo":"0", "Titulo":"Como Ilustradora PRO", "Texto":"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"},
-        {"Codigo":"1", "Titulo":"Como Design PRO", "Texto":"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"}
-        
-    ] }       
-    ]
-}
-}
+        {
+            "Codigo":3,
+            "Titulo": "Fan-Arts",
+            "Descricao": " Ilustrações feitas para homenajar os atuais e os classicos."
+        }
+      ],
+      "Ilustracoes": [
+        {
+          "Codigo": 0,
+          "Titulo": "Teen Boo",
+          "Data": "10 de fevereiro de 2019",
+          "Descricao": "Um fan-art da personagem de Monstros SA (Monster Inc.)",
+          "Album": 2,
+          "Imagem": "4bc29492520453.5e4d4be7c884f.jpg"
+        },
+        {
+          "Codigo": 1,
+          "Titulo": "Deus é uma Mulher",
+          "Data": "10 de fevereiro de 2019",
+          "Descricao": "Ilustração da celebre frase",
+          "Album": 2,
+          "Imagem": "1c95b492520453.5e4d4be7c2df6.jpg"
+        },
+        {
+          "Codigo": 2,
+          "Titulo": "Categral da Sé",
+          "Data": "10 de fevereiro de 2019",
+          "Descricao": "Logo representativo do famoso Polo Central de São Paulo",
+          "Album": 1,
+          "Imagem": "9160b992516591.5e4d56fc2a4c9.png"
+        },
+        {
+          "Codigo": 3,
+          "Titulo": "Branca de Neve",
+          "Data": "10 de fevereiro de 2019",
+          "Descricao": "Um fan-art da personagem de classico dos desenhos.",
+          "Album": 3,
+          "Imagem": "c9c38a83909527.5d4aee9c75e37.png"
+        },
+        {
+          "Codigo": 4,
+          "Titulo": "Não Titulado",
+          "Data": "10 de fevereiro de 2019",
+          "Descricao": " Um trabalho feito, <i>concept art</i>",
+          "Album": 2,
+          "Imagem": "90ca7d92520453.5e4d4be7c4cb7.jpg"
+        },
+        {
+          "Codigo": 5,
+          "Titulo": "She-Ra",
+          "Data": "10 de fevereiro de 2019",
+          "Descricao": "Um fan-art da personagem de classico dos desenhos e irmã do He-man, mas não simplesmente isso.",
+          "Album": 3,
+          "Imagem": "34ae0792520453.5e4d4be7c5638.jpg"
+        },
+        {
+          "Codigo": 6,
+          "Titulo": "- Não Titulado",
+          "Data": "10 de fevereiro de 2019",
+          "Descricao": "Ilustração",
+          "Album": 2,
+          "Imagem": "95818192520453.5e4d4be7c246e.jpg"
+        },
+        {
+          "Codigo": 7,
+          "Titulo": "- Não Titulada",
+          "Data": "10 de fevereiro de 2019",
+          "Descricao": "Ilustração",
+          "Album": 2,
+          "Imagem": "07898392520453.5e4d4be7c14c6.jpg"
+        },
+        {
+          "Codigo": 9,
+          "Titulo": "Sakura",
+          "Data": "07 de marco de 2020",
+          "Descricao": "Um fan-art da personagem do anime Cardcaptor Sakura",
+          "Album": 3,
+          "Imagem": "b632a192520453.5e4d4be7c8012.jpg"
+        },
+
+        {
+            "Codigo": 10,
+            "Titulo": "Ashe",
+            "Data": "07 de marco de 2019",
+            "Descricao": "Um fan-art da personagem do anime Pokemon",
+            "Album": 3,
+            "Imagem":"5fdb8a92520453.5e4d4be7c3d18.jpg"
+        },
+        {
+            "Codigo": 11,
+            "Titulo": "Santissima Mãe do João",
+            "Data": "07 de marco de 2019",
+            "Descricao": "Comissão para um cliente e amigo. ",
+            "Album": 0,
+            "Imagem":"4891de92520453.5e4d4be7c74c1.jpg"
+        },
+        {
+            "Codigo": 12,
+            "Titulo": " - ",
+            "Data": "07 de marco de 2019",
+            "Descricao": "Comissão do ",
+            "Album": 0,
+            "Imagem":"5552db92520453.5e4d4be7c5ca1.jpg"
+        },
+        {
+            "Codigo": 13,
+            "Titulo": " - ",
+            "Data": "07 de marco de 2019",
+            "Descricao": "Comissão para um cliente ",
+            "Album": 0,
+            "Imagem":"01911492520453.5e4d4be7c1aba.jpg"
+        },
+        {
+            "Codigo": 14,
+            "Titulo": " - ",
+            "Data": "07 de marco de 2019",
+            "Descricao": "Comissão para um lindo casal. ",
+            "Album": 0,
+            "Imagem":"0a4ba292520453.5e4d4be7c4466.jpg"
+        },
+        {
+            "Codigo": 15,
+            "Titulo": " - ",
+            "Data": "07 de marco de 2019",
+            "Descricao": "Ilustração.",
+            "Album": 0,
+            "Imagem":"1ce09c92520453.5e4d4be7c1f4a.jpg"
+        }
+      ]
+    },
+    "Sobre": {
+      "Texto_principal": "Olá novamente visitante.<br> Eu, Peixinho, nasci em 7 de março do 1° ano da Virada do Milenio, ou seja, 2000. Nascida e crianda na cidade de Itaquaquecetuba, Região Leste do Estado de São Paulo.",
+      "Habilidades": [
+        {
+          "Softwares": [
+            {
+              "Codigo": 0,
+              "Titulo": "Adobe Photoshop",
+              "Texto": "O famoso editor de fotos e programa de design da Adobe.",
+              "Nivel": 70,
+              "Imagem": "img/icones/photoshop.png"
+            },
+            {
+              "Codigo": 1,
+              "Titulo": "Adobe Illustrator",
+              "Texto": "Também da Adobe, usado para criar os logos e identidades visuais.",
+              "Nivel": 80,
+              "Imagem": "img/icones/illustrator.png"
+            },
+            {
+              "Codigo": 2,
+              "Titulo": "Autodesk SketchBook ",
+              "Texto": "Um programa para criação de desenhos.",
+              "Nivel": 100,
+              "Imagem": "img/icones/autodesk.png"
+            }
+          ]
+        },
+        {
+          "Outros_Textos": [
+            {
+              "Codigo": "0",
+              "Titulo": "Como Ilustradora PRO",
+              "Texto": "<p>Desde muito nova, Peixinho, provavelmente, desenhava, porém com o tempo, foi perdendo o gosto. Mas tudo mudou em 2017.</p><p>Era de tarde, ela havia acabado de fazer minha redação do ENEM, mas não podia sair. Para passar o tempo, fiz um desenho no verso da prova.</p> <P>Quando finalmente cheguei em casa, postou o desenho feito no Twitter, um tempo depois, um usuario disse que queria comprar o desenho. Foi vendido por menos de 5 reais, mas depois disso, continuo a desenhar e a aperfeiçoar sua arte a cada dia.</P>"
+            },
+            {
+              "Codigo": "1",
+              "Titulo": "Como Design PRO",
+              "Texto": "<p>Ingressei de fato no design em 2019, quando entrei na UNIP, para o curso de Tecnologia de Design Grafico.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  }

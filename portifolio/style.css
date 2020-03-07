@@ -80,6 +80,12 @@ h2{
     font-weight: 100;
 }
 
+h3{
+    text-align: center;
+    font-size: 250%;
+    font-weight: 100;
+}
+
 footer {
     font-weight: 300;
     background: rgba(0, 0, 0, 0.8);

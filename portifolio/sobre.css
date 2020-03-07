@@ -6,6 +6,7 @@
 
 #Sobre section {
     margin: 200px auto 200px 7%;
+    padding: 0 5%;
 }
 
 #Sobre section:nth-child(1) {
@@ -18,12 +19,11 @@
 }
 
 #Sobre section article {
-    font-size: 100%;
+    font-size: 120%;
     text-align: justify;
-    text-indent: 20%;
+    text-indent: 10%;
     word-spacing: 0.1rem;
-    line-height: 1.5rem;
-
+    line-height: 2.5rem;
     margin-bottom: 50px;
 }
 
